@@ -6,6 +6,9 @@ Create the execution context diagram of the following code. Also write the outpu
 console.log('First');
 setTimeout(() => console.log('Second'), 0);
 console.log('Third');
+//First
+//Third
+//Second
 ```
 
 2.
@@ -18,6 +21,10 @@ function secondCall() {
 setTimeout(secondCall, 2000); // execute this code after 1000 ms
 setTimeout(() => console.log('Third'), 0); // execute this code after 1000 ms
 console.log('Third');
+//First
+//Third
+//Second
+//Third
 ```
 
 3.
@@ -30,6 +37,10 @@ function secondCall() {
 setTimeout(secondCall, 1000); // execute this code after 1000 ms
 setTimeout(() => console.log('Third'), 0);
 console.log('Fourth');
+//First
+//Fourth
+//Third
+//Second
 ```
 
 4.
@@ -42,6 +53,10 @@ function secondCall() {
 setTimeout(secondCall, 1000); // execute this code after 1000 ms
 setTimeout(() => console.log('Third'), 0);
 console.log('Fourth');
+//First
+//Fourth
+//Third
+//Second
 ```
 
 5. What will be the output of the code below and why? Also write the timing of the output starting with 0 ms.
