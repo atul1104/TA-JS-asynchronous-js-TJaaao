@@ -107,8 +107,6 @@ section {
 }
 body {
   line-height: 1;
-  background-color: #f1deb8;
-  text-align: center;
 }
 ol,
 ul {
@@ -129,25 +127,85 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+* {
+  box-sizing: border-box;
+}
+/* custom css  */
+body {
+  background: #f1deb8;
+}
 
+.flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+  padding: 1rem 0;
+}
 header {
-  background-color: black;
-  padding: 1.2rem 0;
+  background: black;
+  padding: 1rem 0;
 }
 h1 {
-  color: white;
   font-size: 2rem;
-  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+main {
   text-align: center;
 }
 input {
-  display: block;
-  padding: 0.5rem 1rem;
-  text-align: center;
-  margin: auto;
-  margin-top: 1.2rem;
-  margin-bottom: 1.2rem;
+  padding: 0.5rem 2rem;
+  margin: 2rem 0;
+}
+.image-container {
+  width: 150px;
+  margin: 0 auto;
+}
+.full-width {
+  width: 100%;
+}
+img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+h2 {
+  font-size: 1.5rem;
 }
 h3 {
-  font-size: 1.6rem;
+  margin: 0.7rem 0;
+  text-decoration: underline;
+}
+.followers,
+.following {
+  text-align: left;
+  /* margin-top: 3rem; */
+  font-weight: 700;
+}
+
+.followers img,
+.following img {
+  width: 50px;
+  margin-left: 0.5rem;
+}
+.margin-right {
+  margin-left: 30rem;
+}
+
+.cat-img {
+  width: 300px;
+  object-fit: cover;
+  display: block;
+  text-align: center;
+  margin: 2rem auto;
+  border-radius: 0;
+}
+button {
+  padding: 0.4rem 1.3rem;
+  border: 0;
+  background: #301f17;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 5rem;
 }

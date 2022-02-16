@@ -8,23 +8,34 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <h1>GitHub User Finder</h1>
-    </header>
-    <div class="github">
-      <input type="text" placeholder="Enter User Name" />
-      <img src="" alt="" />
-      <h3>Arya Stark</h3>
-      <a href="">User Id</a>
-      <p class="followers">Followers</p>
-      <img src="" alt="" />
-    </div>
-    <hr />
-    <div class="cat">
-      <h3 class="cat-heading">Get Random Cat</h3>
-      <img src="" alt="" />
-      <button>Get New cat</button>
-    </div>
+    <main>
+      <section>
+        <header>
+          <h1>Github User Finder</h1>
+        </header>
+        <input type="text" placeholder="Enter your Github id" />
+        <div class="image-container">
+          <img class="full-width profile-img" src="./media/user.png" alt="" />
+        </div>
+        <h2 class="name">Name</h2>
+        <h3 class="userid">Userid</h3>
+        <div class="flex align-center">
+          <h2 class="margin-right">Followers</h2>
+          <div class="followers flex"></div>
+        </div>
+        <div class="flex align-center">
+          <h2 class="margin-right">Following</h2>
+          <div class="following flex"></div>
+        </div>
+      </section>
+      <section>
+        <header>
+          <h1>Get Random Cat</h1>
+        </header>
+        <img class="cat-img" src="./media/cat.cms" alt="" />
+        <button>Get New Cat</button>
+      </section>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>
