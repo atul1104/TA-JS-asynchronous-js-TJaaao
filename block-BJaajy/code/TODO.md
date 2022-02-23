@@ -1,6 +1,29 @@
-- Create four promises that resolve after 1, 2, 3 and 4 seconds with a random value. Using `Promise.all` log the value of each promise that it resolved with..
+- Create four promises that resolve after 1, 2, 3 and 4 seconds with a random value. Using `Promise.all` log the value of each promise that it resolved with.
+
+```js
+let times = [1, 2, 3, 4, 5];
+let timesPromise = times.map(
+  (second) =>
+    new Promise((resolve) => {
+      setTimeout(() => resolve(Math.random()), second * 1000);
+    })
+);
+Promise.all(timesPromise).then(console.log);
+```
 
 - Create a list of 5 Github usernames in an array and using `Promise.all` get access to the data of each user from GitHub API. Log the number of followers of each user.
+
+```js
+let users = ['getify', 'prank7', 'suraj122', 'atul1104', 'ravi11o'];
+let usersPromise = users.map((user) => {
+  return fetch(`https://api.github.com/users/${user}`).then((response) =>
+    response.json()
+  );
+});
+Promise.all(usersPromise).then((users) => {
+  users.forEach((user) => console.log(user.followers));
+});
+```
 
 - Use `Promise.race` to see which API resolves faster from the given list of URLs. Log the object you get from the promise that is resolved faster.
 
